@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 URGENT: Tristan, Your Phone is in Danger! 🚨</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #ffe6e6;
+            color: #a70000;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            animation: shake 0.5s infinite alternate;
+        }
+        p {
+            font-size: 1.3em;
+        }
+        .button {
+            background-color: #a70000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.3em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+        .button:hover {
+            transform: scale(1.1);
+        }
+        .hidden {
+            display: none;
+        }
+        @keyframes shake {
+            0% { transform: rotate(1deg); }
+            100% { transform: rotate(-1deg); }
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <h1>🚨 URGENT: Tristan, Your Phone is in Danger! 🚨</h1>
+    <p><strong>ALERT:</strong> Your device has been compromised by an unknown sushi-deficiency virus! 🦠🍣</p>
+    <p>Date: <span id="date"></span></p>
+    <p>Immediate action required. Follow these official security protocols:</p>
+    <ol>
+        <li>Rotate your phone 180° to activate the emergency decryption sequence. 🔄</li>
+        <li>Gently shake it to dislodge any stubborn data-eating gremlins. 🤖</li>
+        <li>Whisper, "I love you, phone," to restore trust in the system. 💕</li>
+        <li>Click the button below to recover system. 🍣☕</li>
+    </ol>
+    <button class="button" onclick="showCure()">Start Recovery Plan</button>
+    <div id="cure" class="hidden">
+        <h2>Phew, Tristan! Crisis Averted! 😆</h2>
+        <p>Your phone is in perfect health. 🤣</p>
+        <p>According to the latest cybersecurity reports, coffee payments to the programmer (me) are mandatory for full recovery. 🍣☕</p>
+        <p>Failure to comply may result in repeated pranking. You've been warned. 😜</p>
+        <p>HAPPY APRIL FOOLS' DAY! 🎭</p>
+    </div>
+
+    <script>
+        document.getElementById("date").textContent = new Date().toDateString();
+        function showCure() {
+            document.getElementById('cure').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
