@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Family Fun Alert! 🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            animation: backgroundAnimation 10s infinite alternate;
+            transition: all 0.3s ease;
+        }
+
+        /* Animation for background */
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+            100% { background: linear-gradient(135deg, #fed6e3, #a8edea); }
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #FF6347;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.6em;
+        }
+
+        .button {
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            font-size: 1.4em;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 25px;
+            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background-color: #FF4500;
+        }
+
+        /* Hidden content toggle */
+        .hidden {
+            display: none;
+        }
+
+        /* Add a smooth fade-in animation for the message */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Step list styling */
+        ol {
+            margin-top: 20px;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        ol li {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        /* Media Queries for mobile responsiveness */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+            .button {
+                font-size: 1.2em;
+                padding: 15px 25px;
+            }
+        }
+
+        /* Further media query for very small screens */
+        @media (max-width: 400px) {
+            .button {
+                font-size: 1.1em;
+                padding: 12px 20px;
+            }
+            ol li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Family Fun Alert! 🎉</h1>
+    <p>Hey, family! It looks like your device might be malfunctioning... but don't worry, it's just April Fools' Day! 😜</p>
+    <p>Date: <span id="date"></span></p>
+    
+    <p>In order to "fix" your device, follow these super important steps:</p>
+    <ol>
+        <li>Stand up, do a quick victory dance! 🕺💃</li>
+        <li>Recite your favorite family joke loudly (bonus points for dramatic flair)! 😂</li>
+        <li>Give your phone a hug. It’s working hard to keep you connected! 🤗📱</li>
+        <li>Click the button below to receive your official "April Fools' Fix"! 🎉</li>
+    </ol>
+
+    <button class="button" onclick="showMessage()">Show Me The Fix!</button>
+    
+    <div id="message" class="hidden">
+        <h2>April Fools' Fix Unlocked! 🎉</h2>
+        <p>Congratulations! Your device is working perfectly... and you’ve officially survived another fun family prank! 😁</p>
+        <p>Bonus: You're a prank pro! Keep spreading that family cheer. ❤️</p>
+        <p><strong>April Fools' Joke:</strong> Why did the remote worker bring a blanket to the meeting? Because they wanted to *cover* all the bases! 😆💼</p>
+    </div>
+
+    <script>
+        // Display current date
+        document.getElementById("date").textContent = new Date().toDateString();
+
+        // Toggle visibility of the message
+        function showMessage() {
+            document.getElementById('message').classList.toggle('hidden');
+            // Smooth scroll to the message section when shown
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        // Animation for button hover effect (scaling and color change)
+        document.querySelector('.button').addEventListener('mouseover', function() {
+            this.style.transition = 'transform 0.2s, background-color 0.3s';
+            this.style.transform = 'scale(1.1)';
+        });
+        document.querySelector('.button').addEventListener('mouseout', function() {
+            this.style.transition = 'transform 0.2s, background-color 0.3s';
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+</body>
+</html>
